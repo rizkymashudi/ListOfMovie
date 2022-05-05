@@ -13,6 +13,11 @@
 		F53C7FD92823F23A00A91AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53C7FD72823F23A00A91AA7 /* Main.storyboard */; };
 		F53C7FDB2823F23C00A91AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53C7FDA2823F23C00A91AA7 /* Assets.xcassets */; };
 		F53C7FDE2823F23C00A91AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53C7FDC2823F23C00A91AA7 /* LaunchScreen.storyboard */; };
+		F53C7FE62823F2D200A91AA7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7FE52823F2D200A91AA7 /* Movie.swift */; };
+		F53C7FEC2823F37B00A91AA7 /* DummyMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7FEB2823F37B00A91AA7 /* DummyMovies.swift */; };
+		F53C7FEE2823F3C000A91AA7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7FED2823F3C000A91AA7 /* ImageDownloader.swift */; };
+		F53C7FF12823F4F400A91AA7 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7FF02823F4F400A91AA7 /* PendingOperations.swift */; };
+		F53C7FF32823FC5500A91AA7 /* DownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7FF22823FC5500A91AA7 /* DownloadState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		F53C7FDA2823F23C00A91AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F53C7FDD2823F23C00A91AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F53C7FDF2823F23C00A91AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F53C7FE52823F2D200A91AA7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F53C7FEB2823F37B00A91AA7 /* DummyMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyMovies.swift; sourceTree = "<group>"; };
+		F53C7FED2823F3C000A91AA7 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		F53C7FF02823F4F400A91AA7 /* PendingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
+		F53C7FF22823FC5500A91AA7 /* DownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		F53C7FD02823F23A00A91AA7 /* ListOfMovie */ = {
 			isa = PBXGroup;
 			children = (
-				F53C7FD12823F23A00A91AA7 /* AppDelegate.swift */,
-				F53C7FD32823F23A00A91AA7 /* SceneDelegate.swift */,
-				F53C7FD52823F23A00A91AA7 /* ViewController.swift */,
-				F53C7FD72823F23A00A91AA7 /* Main.storyboard */,
-				F53C7FDA2823F23C00A91AA7 /* Assets.xcassets */,
+				F53C7FE72823F32100A91AA7 /* Base */,
+				F53C7FE82823F32B00A91AA7 /* Model */,
+				F53C7FEA2823F33A00A91AA7 /* Resources */,
+				F53C7FEF2823F4C500A91AA7 /* Utils */,
+				F53C7FE92823F33100A91AA7 /* ViewController */,
 				F53C7FDC2823F23C00A91AA7 /* LaunchScreen.storyboard */,
-				F53C7FDF2823F23C00A91AA7 /* Info.plist */,
 			);
 			path = ListOfMovie;
+			sourceTree = "<group>";
+		};
+		F53C7FE72823F32100A91AA7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F53C7FD12823F23A00A91AA7 /* AppDelegate.swift */,
+				F53C7FD32823F23A00A91AA7 /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F53C7FE82823F32B00A91AA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F53C7FE52823F2D200A91AA7 /* Movie.swift */,
+				F53C7FEB2823F37B00A91AA7 /* DummyMovies.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F53C7FE92823F33100A91AA7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F53C7FD72823F23A00A91AA7 /* Main.storyboard */,
+				F53C7FD52823F23A00A91AA7 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F53C7FEA2823F33A00A91AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F53C7FDF2823F23C00A91AA7 /* Info.plist */,
+				F53C7FDA2823F23C00A91AA7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F53C7FEF2823F4C500A91AA7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F53C7FED2823F3C000A91AA7 /* ImageDownloader.swift */,
+				F53C7FF02823F4F400A91AA7 /* PendingOperations.swift */,
+				F53C7FF22823FC5500A91AA7 /* DownloadState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +195,12 @@
 			files = (
 				F53C7FD62823F23A00A91AA7 /* ViewController.swift in Sources */,
 				F53C7FD22823F23A00A91AA7 /* AppDelegate.swift in Sources */,
+				F53C7FE62823F2D200A91AA7 /* Movie.swift in Sources */,
+				F53C7FF12823F4F400A91AA7 /* PendingOperations.swift in Sources */,
+				F53C7FEC2823F37B00A91AA7 /* DummyMovies.swift in Sources */,
+				F53C7FEE2823F3C000A91AA7 /* ImageDownloader.swift in Sources */,
 				F53C7FD42823F23A00A91AA7 /* SceneDelegate.swift in Sources */,
+				F53C7FF32823FC5500A91AA7 /* DownloadState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ListOfMovie/Info.plist;
+				INFOPLIST_FILE = ListOfMovie/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72B4ASD893;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ListOfMovie/Info.plist;
+				INFOPLIST_FILE = ListOfMovie/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
